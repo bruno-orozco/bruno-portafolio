@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head_content %} 
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hecha un vistazo a todas mis publicaciones. Escribo sobre economía, matemátias, y programación.">
+    <title>Blog personal - Bruno Orozco</title>
+   
+    <link rel="stylesheet" type="text/css" href="{% static 'css/blog-phone.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/blog-desktop.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pure-min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main-grid.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+
+
+{% endblock %}
+
+
+{% block container %}
+
+<h1 style="display: none;">Blog - Bruno orozco</h1>
+<section style="min-height: 90vh;" class="cnt-project">
+    <form class="search__space" method="GET">
+        <div class="input-group mb-3">
+            <input autocomplete="off" type="text" class="form-control" placeholder="Buscar articulo " aria-label="search" aria-describedby="button-addon2" name="search" value="{{ request.GET.search }}">
+            <button class="search btn-outline-secondary" type="submit" id="button-addon2">Buscar</button>
+        </div>
+    </form>
+
+            
+        {% for post in posts %}
+
+                <a id="{{ post.categoria }}" class="card mb-3" href="{{ post.slug }}" style="width: 80%; margin: 0 auto 2.5rem auto;">
+                    <div class="row g-0">
+                    <div style="display: flex background-color: #f5f5f5d1;
+                    border-radius: 1px;;
+                    " class="col-md-4 space-posts">
+                        <img style="max-height: 190px;" src="https://storage.googleapis.com/bucket_brunoorozco/{{ post.photo }}" class="img-fluid rounded-start" alt="{{ post.title }}">
+                    </div>
+                    <div style="padding: 0 0 0 2rem;" class="col-md-8 space-posts">
+                        <div class="card-body">
+                        <h2 style="font-size: 1.3m; line-height: 33px;" class="card-title">{{ post.title }}</h2>
+                        <p style="font-size: 1.6rem; color: #686868; line-height: 1.4em;
+                        margin: 0.3em 0 0 0;" class="card-text">{{ post.descripcion }}</p>
+                        <p style="font-size: 1.5rem;     line-height: 1em;
+                        margin: 0.3em 0 0 0;" class="card-text"><small class="text-muted">{{ post.fecha }} </small></p>
+                        </div>
+                    </div>
+                    </div>
+                </a>
+        {% endfor %}
+    
+</section>
+
+<script>
+
+let buttons= document.querySelectorAll('.nav-blog__element');
+
+let id_el = document.querySelectorAll('#Estadística');
+
+
+buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+    btn.classList.toggle('active');
+    });
+
+});
+
+id_el.forEach(btn => {
+    btn.addEventListener('click', () => {
+    id_ele.classList.toggle('none');
+    });
+
+});
+
+</script>
+
+{% endblock %}

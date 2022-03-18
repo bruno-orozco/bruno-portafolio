@@ -1,0 +1,18 @@
+.container-main {
+    align-items: center;
+    justify-content: center;
+}
+
+.form-ct {
+    margin: 0 5%;
+    width: 50%;
+}
+
+.form-ct__background {
+    margin-top: 2rem;
+    /*height: 30vh;*/
+}
+
+.btn_add_client--cont {
+    margin: 3rem 0 1rem;
+}

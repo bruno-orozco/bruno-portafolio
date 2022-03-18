@@ -1,0 +1,71 @@
+
+.super-cont {
+    min-width: 362px;
+}
+
+.input-group {
+    padding: 2rem 4%;
+}
+
+.form-control {
+    height: 4rem;
+}
+
+.btn-outline-secondary {
+    color: #ffff;
+    background: #1ba113;
+    border-color: #1ba113;
+}
+
+.btn-outline-secondary:hover {
+    background: #30a82a;
+    border-color: #30a82a;
+}
+
+.btn {
+    background-color: #74b900;
+}
+
+.cnt-table {
+    padding: 0 4%;
+}
+
+.form-control {
+    font-size: 1.5rem;
+}
+
+.form-control:focus {
+    border:1px solid rgb(49, 255, 67);
+    box-shadow: 0 0 6px #44af24;
+}
+
+.table {
+    font-size: 1.2rem;
+}
+
+.wt {
+    color: #ffff;
+    text-align: center;
+}
+
+.mod {
+    font-size: 2.75rem;
+    margin: 1rem;
+}
+
+.date {
+    font-size: 1.5rem;
+}
+
+.arribo {
+    font-size: 2rem;
+}
+
+.mb-3 {
+    margin-bottom: 0rem!important;
+}
+
+.sep {
+    border-right: 1px dashed;
+    border-right-color: #74b900;
+}

@@ -1,0 +1,3 @@
+User-Agent: *
+Sitemap: http://bruno-orozco.com/sitemap.xml
+Disallow: /admin/

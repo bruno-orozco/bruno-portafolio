@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head_content %} 
+
+
+    <meta charset="utf-8">
+    <title>Quién es Bruno Orozco | Portafolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Bruno Orozco" />
+    <meta name="robots" content="index"/>
+    
+    <meta name="description" content="Bruno Orozco es un economista y progrmador. Nació el 24 de Septiembre de 1998 en México.">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bruno_or_tech" />
+    <meta name="twitter:creator" content="@bruno_or_tech" />
+    <meta name="twitter:title"       content="Quién es Bruno Orozco" />
+    <meta name="twitter:description" content="Bruno Orozco es un economista y progrmador. Nació el 24 de Septiembre de 1998 en México. Realizó sus estudios en la Facultad de Economía en la UNAM. Le encanta el universo tecnológico. Le apasiona el desarrollo web, la ciencia de datos y la intelingencia artificial." />
+    <meta name="twitter:image"       content="{% static 'me.jpg' %}" />
+
+    <meta property="og:url"         content="{ url 'index' }" />
+    <meta property="og:type"        content="article" />
+    <meta property="og:title"       content="Quién es Bruno Orozco" />
+    <meta property="og:description" content="Bruno Orozco es un economista y progrmador. Nació el 24 de Septiembre de 1998 en México. Realizó sus estudios en la Facultad de Economía en la UNAM. Le encanta el universo tecnológico. Le apasiona el desarrollo web, la ciencia de datos y la intelingencia artificial." />
+    <meta property="og:image"       content="{% static 'me.jpg' %}" />
+
+  
+    
+    <link rel="stylesheet" c href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Permanent+Marker&display=swap" rel="stylesheet">
+    
+
+{% endblock %}
+
+
+
+
+
+{% block container %}
+
+<!---->
+<div id="particles-js" class="splash-container">
+    <div class="splash">
+      <h2 itemprop="author" style="margin: 1.6rem 0 0 0;" class="mn-container__text--title-one">Bruno Orozco</h2>
+      <p style="text-align: center;" class="mn-container__text--title-three">Economista y programador</p>
+
+      <a href="https://api.whatsapp.com/send?phone=5215518142968&text=Hola%2C%20Bruno.%20;)" class="mn-container__text--cv">Contáctame</a>
+      
+    </div>
+</div>
+
+<article itemscope itemtype="https://schema.org/Article" class="content-wrapper">
+    <div class="content">
+        <h1 itemprop="name" class="content-head is-center">
+            Quién es Bruno Orozco
+        </h1>
+        <div class="cont">
+            <img itemprop="image" class="me" src="{% static 'me.jpg' %}" alt="Bruno Orozco"></img>
+        </div>
+        <div class="pure-g">
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4"> 
+              <p itemprop="description">
+                Bruno Orozco es un economista y programador. Nació el 24 de Septiembre de 1998 en México. Realizó sus estudios en la Facultad de Economía de la UNAM. Le encanta el universo tecnológico. Le apasiona el Desarrollo Web, la Ciencia de Datos y la Inteligencia Artificial.
+              </p>
+              <p>
+                Su lenguaje de programación favorito es Python. En él, se divierte elaborando aplicaciones con Django, Flask, Pandas, Numpy, Matplotlib y Plotly. Domina los paradigmas de Programación Orientada a Objetos y Programación Funcional.    
+              </p>
+              <p>
+               No obstante, también te puede ayudar a crear proyectos en Excel y R studio. Además, sabe implementar bases de datos SQL, y data viz con Power BI, Tableau, y Google Data Studio.
+              </p>
+            </div>
+        </div>      
+        <div class="pure-g">
+            <div style="text-align: center;     width: 100%;">
+                <h2 class="content-head is-center">Conoce sus proyectos principales.</h2>
+            </div>
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+                <h3>Micro-sofware: creador de polizas</h3>
+                <div style="text-align: justify; line-height: 30px;">
+                    <p style="text-indent: 25px; padding-bottom: 2rem;">Este micro-software es un creador de pólizas contables. En la empresa se tenía el siguiente problema:
+                    se invertían muchas horas de tiempo para realizar cálculos básicos. Este programa identifica automáticamente si el monto monetario 
+                    es un cargo o un abono. Además, toma en cuenta la sucursal y la fecha en la que se realizó la transacción.
+                    </p>
+                    <p style="text-indent: 25px; padding-bottom: 2rem;">Este script fue hecho 100% en Python. Utilizó la librería <i>pandas</i> para la manipulación de datos, y <i>tkinter</i> para
+                        obtener una interfaz gráfica amigable para cualquier usuario. Con esto, se consiguió que cualquier persona pueda utilizar el código
+                        sin la necesidad de tener grandes conocimientos computacionales. La cabecera prevé los posibles errores que podría cometer el usuario,
+                        proporcionando instrucciones sobre qué hacer para solucionarlo.
+                    </p>
+                </div>
+                
+                
+                <a href="https://github.com/bruno-orozco/creador-polizas">
+                    <img alt="Proyecto Python" style="width: 100%;" src="{% static 'sofware-pandas.png' %}">
+                    </img>
+                </a>
+    
+                <h3>App web: Gestión de Relación con el Cliente</h3>
+                <div style="text-align: justify; line-height: 30px;">
+                    <p style="text-indent: 25px; padding-bottom: 2rem;">Esta app, surgió de la ncesidad de recolectar los datos que los vendedores de la empresa generaban.
+                        Ya que los empleados pertenecían a diferentes regiones de la república mexicana, había un problema de supervisión de la actividad diaria. Este web-site resolvió muchos de estos problemas.
+                        Por un lado, el empleado podía ver el avance de sus métricas de productivadad en tiempo real. Con ello, se logró detectar las áreas de oportunidad en el proceso de prospección. 
+                    </p>
+                    <p style="text-indent: 25px; padding-bottom: 2rem;">Para la creación de esta app se recurrió a <i>HTML</i>, <i>CSS</i> y <i>Javascript</i> para generar el Frontend. Para el Backend, se utilizó el framework <i>Django</i> de Python.
+                        Las bases de datos están compiladas con <i>PostreSQL</i>. Además, se implementó la automatización de reportes diarios vía email a los líderes de ventas. Se recurrió a las librerías <i>psycopg2</i>, <i>pandas</i>, y <i>win32com</i> para este propósito.
+                    </p>
+                </div>
+    
+                <a style="display: flex;" href="https://crm-yee.herokuapp.com/">
+                    <img alt="Proyecto Django" style="width: 100%; max-width: 380px; margin: auto;" src="{% static 'app-yeesolutions.png' %}"></img>
+                </a>
+    
+                <h3>Cursos de programación: Análisis económico con Python</h3>
+                <div style="text-align: justify; line-height: 30px;">
+                    <p style="text-indent: 25px; padding-bottom: 2rem;">A medidados de este año, impartió cursos de programación con enfoque económico. La idea surgió a partir de identificar que no existía un curso de este género.
+                        La diferenciación principal respecto a otros cursos, consitió en guíar las herramientas necesarias para que un aspirante a economista profesional pueda
+                        aprovechar este lenguaje y encontrar un sentido práctico.
+                    </p>
+                </div>
+    
+                <div style="display: flex;">
+                    <img alt="Curso Python" style="width: 100%; max-width: 380px; margin: auto;" src="{% static 'cursos-python.jpg' %}"></img>
+                </div>
+                <div style="text-align: justify; line-height: 30px;">
+                    <p style="text-indent: 25px; padding-bottom: 2rem;">Estudiantes de economía tanto de nivel maestría como de los primeros semestres de economía 
+                        reseñaron positivamente este curso.
+                    </p>
+                </div>
+    
+    
+                <iframe class="fb" src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fcarlos.sobrenombre.q%2Fposts%2F1640768242783935&show_text=true&width=500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    
+                <div style="text-align: justify; line-height: 30px;">
+                    <p style="text-indent: 25px; padding-bottom: 2rem;">Su trabajo pedagógico también se encuentra en YouTube. Esta es una de las clases públicas de estadística con Python.
+                    </p>
+                </div>
+    
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mqjU-bQzqsQ?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+      </div>
+    </div>
+</article>
+
+    
+
+
+<script type="text/javascript" src="{% static 'Js/particles.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'Js/app.js' %}"></script>
+
+{% endblock %}

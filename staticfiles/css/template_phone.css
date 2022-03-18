@@ -1,0 +1,247 @@
+/* Creando las variables de CSS*/
+:root {
+    --blanco: #ffff;
+    --blanco-oscuro: rgba(255, 255, 255, 0.75);
+    --azul-oscruso: #0e1623;
+    --celeste-blanco: #b2cbff;
+    --font-sanz: 'Dm Sans', sans-serif;
+    --azul-botton: #0E1623;
+    --border-botton: #0A57F2;
+    --azul-claro: #3ce2ff;
+    --morado-claro: #5f48ee;
+    --main-text: #b8d1e2;
+  }
+
+/* Reseteando estilos por defecto*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    letter-spacing: 0 !important;
+}
+
+/* Modificando Fuente y su tamaño*/
+html{
+    font-family: Lora, Georgia, serif;;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+li {
+    list-style: none;
+}
+.bg {
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    /* position: absolute; */
+    top: 0;
+    /* z-index: 2; */
+    left: 0;
+}
+.bg__padding-top {
+    padding-top: 55px;
+}
+
+/*---------- Navegador ----------*/
+.head {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__lines path {
+    stroke-width: 5;
+    stroke-linecap: round;
+    transition: all .5s;
+    transform: rotate(0deg);
+    will-change: transform, opacity;
+    transform-origin: center;
+}
+
+.nav-ul {
+    background: var(--azul-oscruso);
+    padding-top: 1rem;
+    align-items: center;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    display: none; 
+    flex-direction: column;
+    margin-left: auto;
+}
+
+.ds-none {
+    display: none;
+}
+
+.nav-ul .nav__li {
+    float: none;
+    list-style: none;
+}
+
+.nav-ul .nav-ul__li a {
+    align-items: center !important;
+    display: inline-flex !important;
+}
+
+
+.nav-ul .nav-ul__li a {
+    color: var(--blanco);
+    font-weight: bold;
+    font-size: 1.4rem;
+    align-items: center;
+    display: inline-flex;
+    padding: 9px;
+    display: block;
+    text-decoration: none;
+}
+
+.nav-ul .nav-ul__li a:hover {
+    color: #ffffffab;
+    fill: #ffffffab;
+}
+
+.nav-ul .nav-ul__li .nav-ul__s {
+    margin: 0 1.2rem 0 0;
+    width: 2rem;
+    height: 2rem;
+}
+
+.nav {
+    position: fixed;
+    width: 100%;
+    height: 55px;
+    background-color: var(--azul-oscruso);
+    z-index: 200;
+}
+
+.title-h1 {
+    font-family: 'Fugaz One', cursive;
+    color: var(--blanco);
+    display:inline;
+    cursor: pointer;
+    float: left;
+    font-size: 3.2rem;
+    margin: .2rem 1.5rem;
+  }
+
+.nav--cont {
+    display: inline-block;
+    width: 100%;
+    height: 42px;
+    justify-content: space-between;
+    margin: .65rem 0;
+    align-items: center;
+}
+
+.nav--cont__second {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    height: 4.8rem;
+}
+
+.nav__lines {
+    width: 50px;
+    height: 40px;
+    fill: var(--arcano-green);
+}
+.nav__icon {
+    width: 50px;
+    height: 40px;
+}
+
+
+/*--------------------- Footer --------------------------*/
+
+
+
+.colpass {
+    color: #2c2c2c;
+    text-decoration: none;
+}
+.colcontact {
+    align-items: center;
+    display: flex;
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.colcontact:hover {
+    color: rgb(220, 220, 220);
+    text-decoration: none;
+}
+
+.ico-sp {
+    padding-right: 2px;
+}
+
+
+.menu-icon {
+    position: relative;
+    max-width: 5.5rem;
+    max-height: 4.125rem;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+  }
+  
+.menu-icon path {
+stroke: var(--arcano-green);
+stroke-width: 5;
+stroke-linecap: round;
+transition: all 250ms ease-in-out;
+transform: rotate(0deg);
+transform-origin: 50% 50%;
+will-change: transform, opacity;
+}
+
+.menu-button:hover path,
+.menu-button:focus path,
+.menu-button:active path {
+stroke: var(--arcano-green);
+}
+
+.menu-icon.is-active path:nth-child(1) {
+opacity: 0;
+}
+
+.menu-icon.is-active path:nth-child(4) {
+opacity: 0;
+}
+
+.menu-icon.is-active path:nth-child(2) {
+transform: rotate(45deg);
+}
+
+.menu-icon.is-active path:nth-child(3) {
+transform: rotate(-45deg);
+}
+
+.fb {
+    display: flex;
+    height: 200px;
+}
+
+.cont {
+    text-align: justify;
+    line-height: 30px;
+    display: grid;
+}
+
+.me {
+    margin: auto;
+    border-radius: 50%;
+    width: 15rem;
+}
+
+.width {
+    width: 100%;
+    height: 10vh;
+}
+
+.text-content {
+    text-align: justify;
+    font-size: 1.3rem;
+}

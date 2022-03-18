@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head_content %} 
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>{{ article.title }} - Bruno Orozco</title>
+
+
+    <meta name="description" content="{{ article.descripcion }}">
+    <meta name="robots" content="{{ article.title }}"/>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bruno_or_tech" />
+    <meta name="twitter:creator" content="@bruno_or_tech" />
+    <meta name="twitter:title"       content="{{ article.title_fb }}" />
+    <meta name="twitter:description" content="{{ article.descripcion }}" />
+    <meta name="twitter:image"       content="https://storage.googleapis.com/bucket_brunoorozco/{{ article.photo }}" />
+
+    <meta property="og:url"         content="{% url 'posts' %}{{ article.title }}" />
+    <meta property="og:type"        content="article" />
+    <meta property="og:title"       content="{{ article.title_fb }}" />
+    <meta property="og:description" content="{{ article.descripcion }}" />
+    <meta property="og:image"       content="https://storage.googleapis.com/bucket_brunoorozco/{{ article.photo }}" />
+
+   
+    <link rel="stylesheet" type="text/css" href="{% static 'css/blog-phone.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/blog-desktop.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pure-min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main-grid.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+
+{% endblock %}
+
+
+
+
+{% block container %}
+<section style="min-height: 90vh;" class="cnt-project">
+
+
+
+    <div class="cont-post">
+        <div class="center">
+            <h1 class="card-title">{{ article.title }}</h1>
+            <img style="max-height: 190px;" src="https://storage.googleapis.com/bucket_brunoorozco/{{ article.photo }}" class="img-fluid rounded-start auto" alt="{{ post.title }}"></img>
+        </div>
+        <div style="font-size: 1.75rem; color: #141414; line-height: 1.7em;
+        font-weight: 400;">
+            <p class="card-text">{{ article.descripcion }}</p>
+        </div>
+    </div>
+    <div style="    width: 80%;
+    max-width: 720px;
+    margin: 0 auto;">
+        <div id="fb-root"></div>
+
+        <div class="fb-share-button" 
+        data-href="{% url 'posts' %}{{ article.title }}" 
+        data-layout="button_count">
+        </div>
+
+        <div style="font-size: 1.6rem; margin: 2rem 0 0 0;"><small style="font-weight: bold;">#{{ article.categoria }}</small></div>
+        <div style="font-size: 1.6rem;"><small style="font-weight: bold;">Publicado el: {{ article.fecha }}</small></div>
+    </div>
+        
+
+
+    <div class="cont-post">
+        <div style="font-size: 1.75rem; color: #141414; line-height: 1.7em;
+        font-weight: 400;">
+            <p class="card-text">{{ article.contenido|safe|linebreaks  }}</p>
+        </div>
+
+        <div style="font-size: 1.6rem; margin-bottom: 2rem;"><small style="font-weight: bold;">Por: @{{ article.autor }}</small></div>
+        
+
+    </div>
+
+
+
+</section>
+
+<script>
+
+let buttons= document.querySelectorAll('.nav-blog__element');
+
+buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+    btn.classList.toggle('active');
+    });
+
+});
+
+</script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v13.0" nonce="SXypRxrK"></script>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    
+</script>
+
+
+
+{% endblock %}

@@ -1,0 +1,274 @@
+/*
+1. Root
+2. Background
+3. Menú
+5. Main
+6. Footer
+*/
+
+/*----------1.Root----------*/
+:root {
+    --blanco: #ffff;
+    --blanco-oscuro: rgba(255, 255, 255, 0.75);
+    --azul-oscruso: #0e1623;
+    --celeste-blanco: #b2cbff;
+    --font-sanz: 'Dm Sans', sans-serif;
+    --azul-botton: #0E1623;
+    --border-botton: #0A57F2;
+    --azul-claro: #3ce2ff;
+    --morado-claro: #5f48ee;
+    --main-text: #b8d1e2;
+  }
+  
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  
+  html {
+    font-size: 62.5%;
+    font-family: 'DM Sans', sans-serif;
+  }
+  
+  
+  a {
+    text-decoration: none;
+  }
+  
+  /*----------2.Background----------*/
+  .bg-main{
+    background: var(--azul-oscruso);  /* fallback for old browsers */
+    width: 100%;
+    height: auto;
+  }
+
+
+  
+  /*----------3.Menú----------*/
+  .mn__nav {
+    padding: 0 3rem;
+    width: 100%;
+  }
+  
+  
+  .mn__nav--hd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  
+  .mn__nav--list {
+    display: inline;
+  }
+  
+  
+  .title-h1 {
+    font-family: 'Fugaz One', cursive;
+    color: var(--blanco);
+    display:inline;
+    cursor: pointer;
+    float: left;
+    margin: .75rem 1.5rem;
+    line-height: 5rem;
+    font-size: 3.5rem;
+    text-align: center;
+    align-items: center;
+  }
+  
+  
+  .title-h1:hover {
+    color: var(--blanco-oscuro);
+  }
+  
+  
+  .nv-button {
+    display: contents;
+    padding-block: 2.2rem;
+  }
+  
+  
+  .nv-button__link {
+    color: var(--blanco);
+    font-size: 2.2rem;
+    margin: 0 .5rem;
+    list-style: none;
+  }
+  
+  .nv-button__link:hover {
+    color: var(--blanco-oscuro);
+    cursor: pointer;
+  }
+  
+  
+  .nv-button__link--blog {
+    font-size: 2.2rem;
+    border: 2px solid #0A57F2;
+    border-radius: 30px;
+    padding: .5rem 2rem;
+    color: var(--blanco) !important;
+  }
+  
+  .nv-button__link--blog:hover {
+    background-color: var(--azul-botton);
+    color: var(--blanco-oscuro);
+  }
+  
+  
+  /*----------4.Main----------*/
+  .mn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .mn-container__img {
+    display: flex;
+    justify-content: end;
+  }
+  
+  
+  .mn-container__text {
+    margin: 2rem 1rem 10rem 8rem;
+  }
+  
+  
+  .mn-container__text--title-one {
+    color: var(--azul-claro);
+    padding: .15rem 0;
+    font-size: 3.75em;
+    line-height: 1.2em;
+  }
+  
+  
+  
+  .mn-container__text--title-three {
+    color: var(--main-text);
+    line-height: 1.3em;
+    font-size: 1.7em;
+  }
+  
+  
+  .mn-container__text--cv {
+    width: 25rem;
+    font-size: 2rem;
+    background-color: rgba(60, 226, 255, 0.19);
+    color: var(--blanco);
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 2.25rem 0px;
+    border: 2px solid var(--border-botton);
+    border-radius: 10px;
+  }
+  
+  
+  .mn-container__text--cv:hover {
+    background-color: rgb(60 226 255 / 10%);
+  }
+  
+  
+  .mn-container__img--size {
+    width: 43%;
+    min-width: 60rem;
+    float: right;
+    padding: 2.75rem 5.5rem 6rem 0;
+  }
+  
+  
+  .second-section__mg {
+    margin: 0 5rem;
+    padding: 3rem 0;
+  }
+  .second-section__bg {
+    padding: 2rem 17rem;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: #192732;
+    color: #B8D1E2;
+    border-radius: 80px;
+  }
+  
+  .second-section__title--global {
+    font-size: 60px;
+    font-weight: bold;
+    justify-content: center;
+  }
+  
+  
+  .second-section__title--skills {
+    font-size: 40px;
+  }
+  
+  .second-section__title--list {
+    font-size: 30px;
+  }
+  
+  .second-section__text {
+    font-size: 18px;
+  }
+  
+  /*----------5.Footer----------*/
+  .main-container {
+    width: auto;
+    height: auto;
+    text-align: center;
+    display: flex;
+  }
+  
+  
+  footer {
+    width: 100%;
+    height: auto;
+    background-color: #0e1623;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+  }
+  
+  .footer--links {
+    text-align: center;
+    margin: 0rem auto;
+    width: 50%;
+  }
+  
+  
+  footer ul {
+    list-style: none;
+  }
+  
+  footer ul li {
+    padding: 4px 0;
+  }
+  
+  footer ul li a {
+    display: inline-flex;
+    text-decoration: none;
+    color: #ffffff !important;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 18px;
+    text-align: start;
+  }
+  
+  footer ul li a p {
+    padding: 0 1rem;
+  }
+  
+  .footer--logo {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.5rem;
+    width: 50%;
+  }
+  
+  .footer-space {
+    padding: 0 1rem;
+    font-size: 1.5rem;
+  }
+  
+  

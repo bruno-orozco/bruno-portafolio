@@ -1,0 +1,19 @@
+/** min-width: 860px **/
+
+.mn-ct {
+    height: 81vh;
+}
+
+.container-first {
+    width: 50%;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: inherit;
+    justify-content: center;
+}
+
+.main-container__mg-top {
+    padding-top: 4rem;
+}

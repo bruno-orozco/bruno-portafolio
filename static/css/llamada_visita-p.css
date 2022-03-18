@@ -1,0 +1,49 @@
+.title {
+    font-size: 4rem;
+    padding: 3.5rem 3rem 3rem;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 2.8rem;
+    color: #2cdd39;
+    padding: 0 3rem;
+}
+
+.cont-icons {
+    margin: 7rem 0;
+    justify-content: center;
+    display: flex;
+}
+
+.a-icon {
+    width: 10rem;
+    margin: auto;
+    display: block;
+    fill: #2bff00;
+    text-decoration: none;
+}
+
+.a-icon:hover {
+    fill: #5cff3b;
+}
+
+.event:hover {
+    color: #5cff3b;
+}
+
+.icon {
+    width: 100%;
+}
+
+.event {
+    color: #2bff00;
+    font-size: 2.5rem;
+    margin: 2rem 0;
+}
+
+.cont-center {
+    text-align: center;
+    color: #fff;
+    height: 90vh;
+}

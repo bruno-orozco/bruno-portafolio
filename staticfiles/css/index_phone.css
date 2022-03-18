@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+   background-color: #262626;
+   min-width: 322px;
+}
+
+
+.main-bg {
+    background: #262626;  /* fallback for old browsers */
+    width: 100%;
+    min-width: 320px;
+    height: 90vh;
+    display: flex;
+}
+
+.main-bg__superc-contet {
+    margin: auto;
+}
+
+.main-bg__content {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-right: None;
+}
+
+.main-bg__content--one {
+    max-width: 280px;
+    padding: 3rem 0;
+    display: grid;
+}
+.cont-2 {
+    max-width: 85%;
+    padding: 3% 0 5rem 0;
+
+
+}
+.main__logo{
+    padding: 10px 0 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__logo--img {
+    width: 120px;
+}
+
+.main__text {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-align: center;
+    color: #ffff;
+}
+.container-form {
+    width: 100%;
+    max-width: 375px;
+}
+.form {
+    width: 28rem;
+    padding: 2% 6%;
+    background-color: #FFFF;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+
+form input {
+    width: 100%;
+    font-size: 17px;
+    padding: 1.2rem 0.9em;
+    margin-top: 16px;
+    border-radius: 2px;
+    border: none;
+    outline-color: #60AD28;
+    border: 2px solid #4A871F;
+}
+.login {
+    padding: 12px;
+    width: 100%;
+    margin-top: 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.5rem;
+    background-color: #6EC72E;
+    color: #f7f7f7;
+    cursor: pointer;
+}
+.login:hover {
+    background-color: #60AD28;
+}
+.passfaild {
+    width: 100%;
+    font-size: 1.3rem;
+    margin: 1.5rem 0rem;
+    display: block;
+    text-align: center;
+}
+.divider {
+    border-top: 2px solid #d9dadc;
+    line-height: 2px;
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.record {
+    padding: 0 5.5rem 0 5.5rem;
+    text-align: center;
+}
+.record-r {
+    padding: 12px;
+    width: 100%;
+    margin-top: 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.8rem;
+    background-color: #393e46ec;
+    color: #f4f4f4;
+    cursor: pointer;
+}
+.record-r:hover {
+    background-color: #393e46;
+}
+footer {
+    display: flex;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #262626;
+}
+
+.colpass {
+    color: #393e46;
+    text-decoration: none;
+}
+.colcontact {
+    align-items: center;
+    display: flex;
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.ico-sp {
+    padding-right: 2px;
+}

@@ -1,0 +1,16 @@
+@media (min-width: 768px) {
+    .col-md-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+    .col-md-8 {
+        flex: 0 0 auto;
+        width: 66.66666667%;
+    }
+    .cont-post {
+        margin: 0 auto 2rem auto;
+    }
+}
+
+
+

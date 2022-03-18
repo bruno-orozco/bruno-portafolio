@@ -1,0 +1,43 @@
+.nav {
+    height: 50px;
+}
+.nav .nav__lines {
+    display: none;
+}
+
+.nav-ul {
+    display: contents;
+    list-style: none; /* Modificado */
+}
+
+.nav--cont {
+    height: 30px;
+    padding-right: 13%;
+    padding-left: 1%;
+    display: flex;
+    margin: 1rem 0;
+}
+
+.nav-ul .nav-il {
+    float: left;
+}
+
+.nav-ul .nav-ul__li a {
+    font-size: 1.6rem;
+}
+
+.nav__icon {
+    height: 33px;
+}
+
+.bg__padding-top {
+    padding-top: 50px;
+}
+
+.ds-none {
+    display: block;
+}
+
+.fb {
+    height: 14em;
+}
