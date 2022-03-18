@@ -15,6 +15,7 @@ class Categorias(admin.ModelAdmin):
 class PostsAdmin(admin.ModelAdmin):
     exclude = ('slug', )
     
+    
 admin.site.unregister(Posts)
 admin.site.register(Posts, PostsAdmin)
     

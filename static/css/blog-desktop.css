@@ -1,4 +1,7 @@
 @media (min-width: 768px) {
+    h1 {
+        font-size: 3.5rem !important;
+    }
     .col-md-4 {
         flex: 0 0 auto;
         width: 33.33333333%;
