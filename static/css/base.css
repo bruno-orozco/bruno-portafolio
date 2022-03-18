@@ -225,17 +225,10 @@
     height: auto;
     background-color: #0e1623;
     display: flex !important;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 0 1rem;
-  }
-  
-  .footer--links {
-    text-align: center;
-    margin: 0rem auto;
-    width: 50%;
-  }
-  
+    padding: 2rem 0;
+  }  
   
   footer ul {
     list-style: none;
