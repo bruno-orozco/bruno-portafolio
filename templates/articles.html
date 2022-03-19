@@ -26,7 +26,37 @@
     <meta property="og:description" content="{{ article.descripcion }}" />
     <meta property="og:image"       content="https://storage.googleapis.com/bucket_brunoorozco/{{ article.photo }}" />
 
-   
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "NewsArticle",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "{% url 'posts' %}{{ asticle.slug }}"
+          },
+          "headline": "{{ article.title }}",
+          "image": [
+            "https://storage.googleapis.com/bucket_brunoorozco/{{ article.photo }}",
+          ],
+          "description", "{{ article.descripcion }}"
+          "datePublished": "{{ article.fecha }}",
+          "author": {
+            "@type": "Person",
+            "name": "Bruno Orozco",
+            "url": "{% url 'index' %}"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Bruno Orozco",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "{% static 'me.jpg' %}"
+            }
+          }
+        }
+        </script>
+
+
     <link rel="stylesheet" type="text/css" href="{% static 'css/blog-phone.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/blog-desktop.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/pure-min.css' %}">
