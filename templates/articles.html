@@ -20,7 +20,7 @@
     <meta name="twitter:description" content="{{ article.descripcion }}" />
     <meta name="twitter:image"       content="https://storage.googleapis.com/bucket_brunoorozco/{{ article.photo }}" />
 
-    <meta property="og:url"         content="{% url 'posts' %}{{ article.title }}" />
+    <meta property="og:url"         content="{% url 'posts' %}{{ article.slug }}" />
     <meta property="og:type"        content="article" />
     <meta property="og:title"       content="{{ article.title_fb }}" />
     <meta property="og:description" content="{{ article.descripcion }}" />
@@ -72,12 +72,12 @@
         <div id="fb-root"></div>
 
         <div class="fb-share-button" 
-        data-href="{% url 'posts' %}{{ article.title }}" 
+        data-href="{% url 'posts' %}{{ article.slug }}" 
         data-layout="button_count">
         </div>
 
         <div style="font-size: 1.6rem; margin: 2rem 0 0 0;"><small style="font-weight: bold;">#{{ article.categoria }}</small></div>
-        <div style="font-size: 1.6rem;"><small style="font-weight: bold;">Publicado el: {{ article.fecha }}</small></div>
+        <div style="font-size: 1.6rem;"><small style="font-weight: bold;">Publicado el {{ article.fecha }}</small></div>
     </div>
         
 
@@ -88,7 +88,7 @@
             <p class="card-text">{{ article.contenido|safe|linebreaks  }}</p>
         </div>
 
-        <div style="font-size: 1.6rem; margin-bottom: 2rem;"><small style="font-weight: bold;">Por: @{{ article.autor }}</small></div>
+        <div style="font-size: 1.6rem; margin-bottom: 2rem; width: 100%;"><small style="font-weight: bold;">Por @{{ article.autor }}</small></div>
         
 
     </div>
@@ -97,19 +97,9 @@
 
 </section>
 
-<script>
 
-let buttons= document.querySelectorAll('.nav-blog__element');
-
-buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-    btn.classList.toggle('active');
-    });
-
-});
-
-</script>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v13.0" nonce="SXypRxrK"></script>
+
 <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
