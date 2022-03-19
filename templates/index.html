@@ -64,7 +64,7 @@
             Quién es Bruno Orozco
         </h1>
         <div class="cont">
-            <img itemprop="image" class="me" src="{% static 'me.jpg' %}" alt="Bruno Orozco"></img>
+            <img itemprop="image" class="me" src="{% static 'Bruno Orozco.jpg' %}" alt="Bruno Orozco">
         </div>
         <div class="pure-g">
             <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4"> 
@@ -115,7 +115,7 @@
                 </div>
     
                 <a style="display: flex;" href="https://crm-yee.herokuapp.com/">
-                    <img alt="Proyecto Django" style="width: 100%; max-width: 380px; margin: auto;" src="{% static 'app-yeesolutions.png' %}"></img>
+                    <img alt="Proyecto Django" style="width: 100%; max-width: 380px; margin: auto;" src="{% static 'app-yeesolutions.png' %}">
                 </a>
     
                 <h3>Cursos de programación: Análisis económico con Python</h3>
@@ -127,7 +127,7 @@
                 </div>
     
                 <div style="display: flex;">
-                    <img alt="Curso Python" style="width: 100%; max-width: 380px; margin: auto;" src="{% static 'cursos-python.jpg' %}"></img>
+                    <img alt="Curso Python" style="width: 100%; max-width: 380px; margin: auto;" src="{% static 'cursos-python.jpg' %}">
                 </div>
                 <div style="text-align: justify; line-height: 30px;">
                     <p style="text-indent: 25px; padding-bottom: 2rem;">Estudiantes de economía tanto de nivel maestría como de los primeros semestres de economía 
@@ -153,6 +153,36 @@
 
 
 <script type="text/javascript" src="{% static 'Js/particles.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'Js/app.js' %}"></script>
+
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Naucalpan de Juáez",
+        "addressRegion": "MX",
+        "postalCode": "53570",
+        "streetAddress": "Media Luna 6b"
+    },
+     "colleague": [
+        "http://www.example.com/JohnColleague.html",
+        "http://www.example.com/JameColleague.html"
+      ],
+      "email": "orozco.bruno@comunidad.unam.mx",
+      "image": "../Bruno Orozco.jpg",
+      "jobTitle": "Economista",
+      "name": "Bruno Orozco",
+      "birthPlace": "Estado de México",
+      "birthDate": "1998-09-24",
+      "height": "70 inches",
+      "gender": "man",
+      "nationality": "Mexican",
+      "telephone": "(52) 55-18-14-29-68",
+      "url": "http://www.bruno-orozco.com",
+	    "sameAs" : [ "https://www.facebook.com/bruno.orozco.tech",
+      "https://www.linkedin.com/in/orozco-bruno/",]
+    }
+</script>
 
 {% endblock %}
